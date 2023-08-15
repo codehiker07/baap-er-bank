@@ -6,6 +6,7 @@ document.getElementById('btn-deposit').addEventListener('click', function () {
     const parseDepositAmount = parseFloat(depositAmount);
     // console.log(typeof parseDepositAmount);
 
+
     //Total Deposit Section (Previous)
     const initialDeposit = document.getElementById('initial-deposit');
     const initialDepositTotal = initialDeposit.innerText;
@@ -13,7 +14,9 @@ document.getElementById('btn-deposit').addEventListener('click', function () {
     //Total Deposit Section (Current)
     const currentDepositTotal = parsePreviousDepositTotal + parseDepositAmount;
     initialDeposit.innerText = currentDepositTotal;
+
 })
+
 
 //Withdraw Side
 document.getElementById('btn-withdraw').addEventListener('click', function () {
@@ -45,6 +48,7 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
     //Balance Calculation
     const balanceAfterWithdraw = parseInitialBalanceAmount - parseWithdrawAmount;
     initialBalance.innerText = balanceAfterWithdraw;
+    pleaseWithdraw.value = '';
 })
 
 //Total Balance Section After Deposit
@@ -60,5 +64,7 @@ document.getElementById('btn-deposit').addEventListener('click', function () {
     //Balance Calculation
     const balanceAfterDeposit = parseInitialBalanceAmount + parseDepositAmount;
     initialBalance.innerText = balanceAfterDeposit;
+    pleaseDeposit.value = '';
 })
+
 
